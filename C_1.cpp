@@ -12,7 +12,7 @@ struct String
 		*(str + t) = '\0';
 		n = t;
 	};
-	~String() { if (n == 0) free(str); }
+	~String() { delete[]str; }
 	void print()
 	{
 		for (int i = 0; i < n; i++) cout << *(str + i);
